@@ -33,6 +33,25 @@ body {
   justify-content: center;
 }
 
+.main-app-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.features-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
 /* Floating Hearts */
 .floating-hearts {
   position: fixed;

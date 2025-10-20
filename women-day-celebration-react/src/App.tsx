@@ -8,6 +8,9 @@ import NameDialog from './components/NameDialog';
 import MainContent from './components/MainContent';
 import BackgroundEffects from './components/BackgroundEffects';
 import AudioPlayer from './components/AudioPlayer';
+import MessageWall from './components/MessageWall';
+import VirtualGiftBox from './components/VirtualGiftBox';
+import SocialShare from './components/SocialShare';
 
 // Types
 interface UserData {
@@ -98,7 +101,16 @@ function App() {
         {showDialog ? (
           <NameDialog key="dialog" onSubmit={handleNameSubmit} />
         ) : (
-          <MainContent key="main" userData={userData!} />
+          <div className="main-app-content">
+            <MainContent key="main" userData={userData!} />
+            
+            {/* New Features */}
+            <div className="features-section">
+              <VirtualGiftBox />
+              <MessageWall />
+              <SocialShare userName={userData?.name} />
+            </div>
+          </div>
         )}
       </AnimatePresence>
     </div>

@@ -1,0 +1,160 @@
+.message-wall {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 20px 0;
+  max-width: 800px;
+  width: 100%;
+}
+
+.wall-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wall-header h2 {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.wall-header p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1em;
+}
+
+.add-message-btn {
+  background: linear-gradient(45deg, #ff69b4, #ff1493);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin: 0 auto 20px;
+  display: block;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+  transition: all 0.3s ease;
+}
+
+.add-message-btn:hover {
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6);
+}
+
+.message-form {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.message-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message-form input,
+.message-form textarea {
+  padding: 12px;
+  border: 2px solid rgba(255, 105, 180, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.message-form input:focus,
+.message-form textarea:focus {
+  border-color: #ff69b4;
+}
+
+.message-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.message-form button {
+  background: linear-gradient(45deg, #ff69b4, #ff1493);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.message-form button:hover {
+  transform: scale(1.05);
+}
+
+.messages-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.message-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.message-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.message-name {
+  font-weight: bold;
+  color: white;
+  font-size: 1.1em;
+}
+
+.message-time {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9em;
+}
+
+.message-content {
+  color: white;
+  line-height: 1.5;
+  font-size: 1em;
+  word-wrap: break-word;
+}
+
+/* Scrollbar styling */
+.messages-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messages-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 105, 180, 0.6);
+  border-radius: 4px;
+}
+
+.messages-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 105, 180, 0.8);
+}
